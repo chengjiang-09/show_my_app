@@ -5,10 +5,20 @@
     top: 0;
     backdrop-filter: blur(6px);
     border-bottom: 1px solid rgb(97, 97, 97);
+    z-index: 10;
     
     &-container {
         width: 90%;
         height: 10vh;
         margin: 0 auto;
+        position: relative;
+
+        &-title {
+            position: absolute;
+            right: 0;
+            top: 30%;
+            transform: translate(-50%,-50%);
+            color: #ffffff;
+        }
     }
 }

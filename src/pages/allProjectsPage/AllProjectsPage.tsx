@@ -1,15 +1,17 @@
-import React from 'react'
+import React, { useEffect } from 'react'
 import style from './AllProjectsPage.module.less'
 import { AllProjectsOneProject } from '../../components'
+import { getProjectDetil } from '../../redux/projectDetil'
+import { useSelector } from '../../redux/hook'
+import { useDispatch } from 'react-redux'
 
 export const AllProjectsPage: React.FC = () => {
-
-    const projectList = ['../../assets/image/1.jpg','../../assets/image/5.jpg','../../assets/image/4.jpg','../../assets/image/3.jpg','../../assets/image/2.jpg']
+    let projectDetil = useSelector(state => state.projectDetil.detil)
 
     return (
         <div className={style.AllProjectsPage}>
             {
-                projectList.map((path, index) => <AllProjectsOneProject key={index} path={require(path)}/>)
+                projectDetil.map(obj => <AllProjectsOneProject key={obj.id} path={obj.path} id={obj.id}/>)
             }
         </div>
     )

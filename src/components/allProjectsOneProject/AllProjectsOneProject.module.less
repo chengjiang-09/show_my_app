@@ -1,6 +1,5 @@
 .AllProjectsOneProject {
-
-    width: 18vw;
+    width: 21vw;
     height: 30vh;
     background-color: #000;
     padding: 1vh .5vw;
@@ -33,12 +32,18 @@
             position: absolute;
             bottom: 0;
             left: 0;
-            transform: translateY(100%);
-            opacity: 0;
+            transform: translateY(50%);
+            opacity: .3;
             transition: transform .5s,opacity .5s;
             z-index: 10;
             background-color: #000000;
             color: #ffffff;
+            padding: 0 1vw;
+            text-overflow: ellipsis;
+            overflow: hidden;
+            display: -webkit-box;
+            -webkit-box-orient: vertical;
+            -webkit-line-clamp: 3;
         }
         
         &:hover {
