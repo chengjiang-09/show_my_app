@@ -1,8 +1,10 @@
 import { configureStore } from '@reduxjs/toolkit'
 import { projectDetilSlice } from './projectDetil'
+import { projectListSlice } from './projectList'
 
 const rootStore = {
-    projectDetil: projectDetilSlice.reducer
+    projectDetil: projectDetilSlice.reducer,
+    projectList: projectListSlice.reducer
 }
 
 const store = configureStore({

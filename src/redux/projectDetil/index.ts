@@ -3,7 +3,7 @@ import { projectDetilReducer } from './reducer'
 import applist from '../../assets/json/appList.json'
 
 export interface ProjectDetil {
-    detil: {path: string, id: string, all:string[]}[],
+    detil: {path: string, id: string}[],
 }
 
 const stateValue : ProjectDetil = {
@@ -14,8 +14,7 @@ const stateValue : ProjectDetil = {
 applist.appList.forEach(value => {
     const obj = {
         path: `https://www.azhmau.top/img/showApp/${value.title}/${value.picName}`,
-        id: value.title,
-        all: value.all
+        id: value.title
     }
     
     stateValue.detil.push(obj)

@@ -14,7 +14,7 @@
             width: 10vw;
             height: 10vh;
             border-radius: 5vh 5vh;
-            transform: translate(-70%,0);
+            transform: translate(-70%, 0);
             font-size: 1.4vw;
             color: #ffffff;
             border-right: 5px #ffffff solid;
@@ -27,18 +27,78 @@
                 position: absolute;
                 left: 85%;
                 top: 50%;
-                transform: translate(-50%,-50%);
+                transform: translate(-50%, -50%);
                 transition: left .5s;
             }
 
             &:hover {
-                transform: translate(-20%,0);
+                transform: translate(-20%, 0);
 
                 .openGoBackTitle {
                     position: absolute;
                     left: 50%;
                     top: 50%;
-                    transform: translate(-50%,-50%);
+                    transform: translate(-50%, -50%);
+                }
+            }
+        }
+
+        &-goLeftOrRight {
+            width: 4vw;
+            height: 4vw;
+            background-color: #ffffff;
+            z-index: 999;
+            cursor: pointer;
+            opacity: .3;
+            transition: opacity .3s;
+            &:hover {
+                opacity: .8;
+            }
+        }
+
+        &-goLeft {
+            position: absolute;
+            left: -7vw;
+            top: 29vh;
+        }
+
+        &-goRight {
+            position: absolute;
+            right: -6vw;
+            top: 29vh;
+        }
+
+        &-body {
+            position: absolute;
+            width: 74vw;
+            height: 74vh;
+            overflow: hidden;
+            box-sizing: border-box;
+            display: flex;
+            justify-content: center;
+
+            &-box {
+                position: absolute;
+                left: 0;
+                top: 0vh;
+                width: 5000%;
+                height: 74vh;
+
+                &-layout {
+                    width: 74vw;
+                    height: 74vh;
+                    text-align: center;
+                    display: inline-block;
+
+                    &-video {
+                        max-width: 100%;
+                        max-height: 74vh;
+                    }
+
+                    &-img {
+                        max-width: 100%;
+                        max-height: 74vh;
+                    }
                 }
             }
         }
