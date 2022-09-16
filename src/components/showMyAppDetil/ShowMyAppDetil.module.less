@@ -46,13 +46,18 @@
         &-goLeftOrRight {
             width: 4vw;
             height: 4vw;
-            background-color: #ffffff;
             z-index: 999;
             cursor: pointer;
+            background-color: transparent;
             opacity: .3;
             transition: opacity .3s;
             &:hover {
-                opacity: .8;
+                opacity: .9;
+            }
+
+            &-icon {
+                color: #ffffff;
+                font-size: 5vw;
             }
         }
 
@@ -64,7 +69,7 @@
 
         &-goRight {
             position: absolute;
-            right: -6vw;
+            right: -4vw;
             top: 29vh;
         }
 
@@ -83,14 +88,44 @@
                 top: 0vh;
                 width: 5000%;
                 height: 74vh;
+                transform: translate(0,0);
+                transition: transform .5s;
+
+                .videoBox {
+                    &:hover {
+                        .actionIcon {
+                            animation: actionIcon .5s linear 0s infinite;
+                        }
+                    }
+                }
 
                 &-layout {
+                    position: relative;
                     width: 74vw;
-                    height: 74vh;
                     text-align: center;
                     display: inline-block;
+                    &-videoStart {
+                        position: absolute;
+                        pointer-events: none;
+                        left: 50%;
+                        top: 50%;
+                        width: 12vw;
+                        height: 12vw;
+                        background-color: transparent;
+                        z-index: 999;
+                        transform: translate(-50%,-50%);
+                        border-radius: 6vw;
+                        border: 2px #ffffff solid;
+                        padding: 0 0 0 .6vw;
+                        opacity: .8;
 
+                        &-icon {
+                            color: #ffffff;
+                            font-size: 12vw;
+                        }
+                    }
                     &-video {
+                        cursor: pointer;
                         max-width: 100%;
                         max-height: 74vh;
                     }
@@ -102,5 +137,17 @@
                 }
             }
         }
+    }
+}
+
+@keyframes actionIcon {
+    0% {
+        opacity: .8;
+    }
+    50% {
+        opacity: .1;
+    }
+    100% {
+        opacity: .8;
     }
 }

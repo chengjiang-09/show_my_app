@@ -1,9 +1,7 @@
-import React, { useEffect } from 'react'
+import React from 'react'
 import style from './AllProjectsPage.module.less'
 import { AllProjectsOneProject } from '../../components'
-import { getProjectDetil } from '../../redux/projectDetil'
 import { useSelector } from '../../redux/hook'
-import { useDispatch } from 'react-redux'
 
 export const AllProjectsPage: React.FC = () => {
     let projectDetil = useSelector(state => state.projectDetil.detil)
